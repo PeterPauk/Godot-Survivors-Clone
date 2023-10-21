@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu5cqmalectxa"]
+
+[ext_resource type="Script" path="res://Utility/enemy_spawner.gd" id="1_jhx2b"]
+[ext_resource type="Script" path="res://Utility/spawn_info.gd" id="2_5n82c"]
+[ext_resource type="PackedScene" uid="uid://d086k6x2dqno6" path="res://Enemy/enemy.tscn" id="2_pj5bx"]
+
+[sub_resource type="Resource" id="Resource_n12dj"]
+script = ExtResource("2_5n82c")
+time_start = 0
+time_end = 60
+enemy = ExtResource("2_pj5bx")
+enemy_num = 1
+enemy_spawn_delay = 1
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_jhx2b")
+spawns = Array[ExtResource("2_5n82c")]([SubResource("Resource_n12dj")])
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
