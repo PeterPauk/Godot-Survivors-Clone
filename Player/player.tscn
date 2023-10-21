@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bntugelqqirvx"]
+[gd_scene load_steps=10 format=3 uid="uid://bntugelqqirvx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_6523k"]
 [ext_resource type="Texture2D" uid="uid://bppn4wuq11bg7" path="res://Textures/Player/Goth Girl-Sheet fin-Sheet.png" id="2_7sjon"]
 [ext_resource type="PackedScene" uid="uid://b1abs8eqyt7ae" path="res://Utility/hurt_box.tscn" id="3_wsr3l"]
+[ext_resource type="PackedScene" uid="uid://dhj2f2wwi330i" path="res://Utility/weapon.tscn" id="4_qt33n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykqls"]
 radius = 6.0
@@ -89,6 +90,9 @@ shape = SubResource("RectangleShape2D_5de4o")
 libraries = {
 "": SubResource("AnimationLibrary_oy2qa")
 }
+
+[node name="Weapon" parent="." instance=ExtResource("4_qt33n")]
+position = Vector2(2, -3)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_Cooldown" to="." method="_on_dash_cooldown_timeout"]
