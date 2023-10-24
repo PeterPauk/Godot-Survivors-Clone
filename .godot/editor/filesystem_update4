@@ -1,10 +1,10 @@
-res://Player/player.tscn
-res://Utility/enemy_spawner.gd
-res://Player/player.gd
+res://Utility/weapon.gd
 res://World/world.tscn
+res://Utility/enemy_spawner.gd
+res://Player/player.tscn
+res://Utility/weapon.tscn
 res://Enemy/enemy.tscn
 res://Utility/hit_box.tscn
 res://Utility/hurt_box.tscn
 res://Utility/enemy_spawner.tscn
-res://Utility/weapon.tscn
-res://Utility/weapon.gd
+res://Player/dynamic_cam.gd

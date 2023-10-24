@@ -1,8 +1,8 @@
 extends CharacterBody2D
-@onready var sprite = $Sprite2D
-@onready var player = get_tree().get_first_node_in_group("player")
 
-@export var rotation_speed = 15
+@onready var sprite = $Sprite2D
+
+@export var rotation_speed = 25
 var angle
 
 func _physics_process(delta):
@@ -11,14 +11,11 @@ func _physics_process(delta):
 
 func _input(event):
 	angle = (get_global_mouse_position()-global_position).angle()
-
 	#gun flipping based on mouse position
 	if get_global_mouse_position().x > sprite.global_position.x:
-		sprite.flip_v = false;
-		
+		sprite.flip_v = false;	
 	else:
 		sprite.flip_v = true;
-		player.sprite.flip_h = true;
 	
 		
 

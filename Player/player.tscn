@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bntugelqqirvx"]
+[gd_scene load_steps=11 format=3 uid="uid://bntugelqqirvx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_6523k"]
 [ext_resource type="Texture2D" uid="uid://bppn4wuq11bg7" path="res://Textures/Player/Goth Girl-Sheet fin-Sheet.png" id="2_7sjon"]
+[ext_resource type="Script" path="res://Player/dynamic_cam.gd" id="3_o1ukv"]
 [ext_resource type="PackedScene" uid="uid://b1abs8eqyt7ae" path="res://Utility/hurt_box.tscn" id="3_wsr3l"]
 [ext_resource type="PackedScene" uid="uid://dhj2f2wwi330i" path="res://Utility/weapon.tscn" id="4_qt33n"]
 
@@ -67,6 +68,9 @@ one_shot = true
 wait_time = 3.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+script = ExtResource("3_o1ukv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
