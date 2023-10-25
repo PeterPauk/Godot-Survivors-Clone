@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bntugelqqirvx"]
+[gd_scene load_steps=12 format=3 uid="uid://bntugelqqirvx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_6523k"]
 [ext_resource type="Texture2D" uid="uid://bppn4wuq11bg7" path="res://Textures/Player/Goth Girl-Sheet fin-Sheet.png" id="2_7sjon"]
@@ -52,6 +52,9 @@ _data = {
 "walk": SubResource("Animation_lsloh")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_buv7q"]
+radius = 377.117
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_6523k")
@@ -98,8 +101,30 @@ libraries = {
 [node name="Weapon" parent="." instance=ExtResource("4_qt33n")]
 position = Vector2(2, -3)
 
+[node name="Attack" type="Node2D" parent="."]
+
+[node name="ShadowOrbTimer" type="Timer" parent="Attack"]
+unique_name_in_owner = true
+wait_time = 4.0
+
+[node name="ShadowAttackTimer" type="Timer" parent="Attack/ShadowOrbTimer"]
+unique_name_in_owner = true
+wait_time = 0.075
+
+[node name="EnemyDetectArea" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetectArea"]
+shape = SubResource("CircleShape2D_buv7q")
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_Cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
+[connection signal="timeout" from="Attack/ShadowOrbTimer" to="." method="_on_shadow_orb_timer_timeout"]
+[connection signal="timeout" from="Attack/ShadowOrbTimer/ShadowAttackTimer" to="." method="_on_shadow_attack_timer_timeout"]
+[connection signal="body_entered" from="EnemyDetectArea" to="." method="_on_enemy_detect_area_body_entered"]
+[connection signal="body_exited" from="EnemyDetectArea" to="." method="_on_enemy_detect_area_body_exited"]
 
 [editable path="HurtBox"]

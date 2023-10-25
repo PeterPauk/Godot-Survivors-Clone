@@ -1,7 +1,10 @@
-CharacterBody2D
-Sprite2D
-AnimationPlayer
-Timer
 CollisionShape2D
 Area2D
+Timer
+Node2D
+AudioStreamPlayer
+Sprite2D
+VisibleOnScreenNotifier2D
+CharacterBody2D
+AnimationPlayer
 Camera2D

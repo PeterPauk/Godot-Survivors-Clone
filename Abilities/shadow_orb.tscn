@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds0u8ova02bm5"]
+
+[ext_resource type="Script" path="res://Abilities/shadow_orb.gd" id="1_2nycu"]
+[ext_resource type="Texture2D" uid="uid://kjpx8qe1xu0g" path="res://Textures/Items/Weapons/ice_spear.png" id="1_ppt1a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_td4dw"]
+size = Vector2(7.07107, 34.6482)
+
+[node name="ShadowOrb" type="Area2D" groups=["attack"]]
+top_level = true
+collision_layer = 4
+script = ExtResource("1_2nycu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.75, -0.250001)
+rotation = -0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_td4dw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ppt1a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
