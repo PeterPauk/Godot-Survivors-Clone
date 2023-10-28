@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bntugelqqirvx"]
+[gd_scene load_steps=11 format=3 uid="uid://bntugelqqirvx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_6523k"]
 [ext_resource type="Texture2D" uid="uid://bppn4wuq11bg7" path="res://Textures/Player/Goth Girl-Sheet fin-Sheet.png" id="2_7sjon"]
 [ext_resource type="Script" path="res://Player/dynamic_cam.gd" id="3_o1ukv"]
 [ext_resource type="PackedScene" uid="uid://b1abs8eqyt7ae" path="res://Utility/hurt_box.tscn" id="3_wsr3l"]
 [ext_resource type="PackedScene" uid="uid://dhj2f2wwi330i" path="res://Utility/weapon.tscn" id="4_qt33n"]
-[ext_resource type="Script" path="res://Utility/shadow_orb.gd" id="6_2mfgj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykqls"]
 radius = 6.0
@@ -53,9 +52,6 @@ _data = {
 "walk": SubResource("Animation_lsloh")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_buv7q"]
-radius = 377.117
-
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_6523k")
@@ -102,32 +98,8 @@ libraries = {
 [node name="Weapon" parent="." instance=ExtResource("4_qt33n")]
 position = Vector2(2, -3)
 
-[node name="ShadowOrb" type="Node2D" parent="."]
-unique_name_in_owner = true
-script = ExtResource("6_2mfgj")
-
-[node name="ShadowOrbTimer" type="Timer" parent="ShadowOrb"]
-unique_name_in_owner = true
-wait_time = 4.0
-
-[node name="ShadowAttackTimer" type="Timer" parent="ShadowOrb/ShadowOrbTimer"]
-unique_name_in_owner = true
-wait_time = 0.075
-
-[node name="EnemyDetectArea" type="Area2D" parent="ShadowOrb"]
-collision_layer = 4
-collision_mask = 4
-monitorable = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ShadowOrb/EnemyDetectArea"]
-shape = SubResource("CircleShape2D_buv7q")
-
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_Cooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="hurt" from="HurtBox" to="." method="_on_hurt_box_hurt"]
-[connection signal="timeout" from="ShadowOrb/ShadowOrbTimer" to="ShadowOrb" method="_on_shadow_orb_timer_timeout"]
-[connection signal="timeout" from="ShadowOrb/ShadowOrbTimer/ShadowAttackTimer" to="ShadowOrb" method="_on_shadow_attack_timer_timeout"]
-[connection signal="body_entered" from="ShadowOrb/EnemyDetectArea" to="ShadowOrb" method="_on_enemy_detect_area_body_entered"]
-[connection signal="body_exited" from="ShadowOrb/EnemyDetectArea" to="ShadowOrb" method="_on_enemy_detect_area_body_exited"]
 
 [editable path="HurtBox"]

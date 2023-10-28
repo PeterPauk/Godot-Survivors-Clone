@@ -9,11 +9,12 @@ var can_dash = true
 @onready var enemy = get_tree().get_first_node_in_group("enemy")
 @onready var walk_anim = $AnimationPlayer
 
-@onready var shadow = get_node("%ShadowOrb")
+var shadow_orb_attack =  preload("res://Cards/shadow_orb_card.tscn")
 
 func _ready():
+	var shadow = shadow_orb_attack.instantiate()
+	add_child(shadow)
 	shadow.attack()
-	
 
 func _physics_process(delta):
 	movement()
