@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ds0u8ova02bm5"]
+[gd_scene load_steps=5 format=3 uid="uid://ds0u8ova02bm5"]
 
 [ext_resource type="Script" path="res://Abilities/shadow_orb.gd" id="1_2nycu"]
-[ext_resource type="Texture2D" uid="uid://kjpx8qe1xu0g" path="res://Textures/Items/Weapons/ice_spear.png" id="1_ppt1a"]
+[ext_resource type="Texture2D" uid="uid://c3lgr7588kbjk" path="res://Textures/Items/Weapons/shadow_orb.png" id="2_0j3iu"]
+[ext_resource type="Texture2D" uid="uid://c5l8mkeobkidq" path="res://Textures/point light.jpg" id="3_semsa"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_td4dw"]
-size = Vector2(7.07107, 34.6482)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jn3ji"]
+height = 25.4558
 
 [node name="ShadowOrb" type="Area2D" groups=["attack"]]
 top_level = true
@@ -12,12 +13,12 @@ collision_layer = 4
 script = ExtResource("1_2nycu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.75, -0.250001)
+position = Vector2(0, 1.19209e-07)
 rotation = -0.785398
-shape = SubResource("RectangleShape2D_td4dw")
+shape = SubResource("CapsuleShape2D_jn3ji")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ppt1a")
+texture = ExtResource("2_0j3iu")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 8.0
@@ -25,5 +26,11 @@ one_shot = true
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.403922, 0.121569, 0.662745, 0.568627)
+energy = 2.0
+texture = ExtResource("3_semsa")
+texture_scale = 0.3
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

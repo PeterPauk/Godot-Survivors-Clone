@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://domev1nfrjtxm"]
+[gd_scene load_steps=5 format=3 uid="uid://domev1nfrjtxm"]
 
 [ext_resource type="Texture2D" uid="uid://si2qc2slw2ff" path="res://Textures/floor_tile.png" id="1_5qnnf"]
 [ext_resource type="PackedScene" uid="uid://bntugelqqirvx" path="res://Player/player.tscn" id="2_xmut7"]
 [ext_resource type="PackedScene" uid="uid://cu5cqmalectxa" path="res://Utility/enemy_spawner.tscn" id="3_6li2r"]
+[ext_resource type="Texture2D" uid="uid://c5l8mkeobkidq" path="res://Textures/point light.jpg" id="4_gyf8k"]
 
 [node name="World" type="Node2D"]
 
@@ -15,4 +16,14 @@ region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="Player" parent="." instance=ExtResource("2_xmut7")]
 
+[node name="Light" type="Node2D" parent="Player"]
+
+[node name="TextureLight" type="PointLight2D" parent="Player/Light"]
+energy = 0.8
+texture = ExtResource("4_gyf8k")
+texture_scale = 1.5
+
 [node name="EnemySpawner" parent="." instance=ExtResource("3_6li2r")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.290196, 0.309804, 0.45098, 1)

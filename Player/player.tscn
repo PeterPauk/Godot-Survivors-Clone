@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bntugelqqirvx"]
+[gd_scene load_steps=13 format=3 uid="uid://bntugelqqirvx"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_6523k"]
 [ext_resource type="Texture2D" uid="uid://bppn4wuq11bg7" path="res://Textures/Player/Goth Girl-Sheet fin-Sheet.png" id="2_7sjon"]
@@ -52,6 +52,12 @@ _data = {
 "walk": SubResource("Animation_lsloh")
 }
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1lo27"]
+blend_mode = 1
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bk4dp"]
+polygon = PackedVector2Array(-4, -16, 3, -16, 3, -15, 4, -15, 4, -9, 3, -9, 3, -7, 4, -7, 4, -6, 5, -6, 5, -2, 4, -2, 4, 0, 3, 0, 3, 1, 5, 1, 5, 2, 6, 2, 6, 3, 7, 3, 7, 6, 6, 6, 6, 7, 5, 7, 5, 8, 4, 8, 4, 11, 5, 11, 5, 16, 1, 16, 1, 8, 0, 8, 0, 11, -1, 11, -1, 16, -5, 16, -5, 11, -4, 11, -4, 8, -5, 8, -5, 7, -6, 7, -6, 6, -7, 6, -7, 3, -6, 3, -6, 2, -5, 2, -5, 1, -4, 1, -4, 0, -5, 0, -5, -7, -6, -7, -6, -13, -5, -13, -5, -15, -4, -15)
+
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_6523k")
@@ -97,6 +103,10 @@ libraries = {
 
 [node name="Weapon" parent="." instance=ExtResource("4_qt33n")]
 position = Vector2(2, -3)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+material = SubResource("CanvasItemMaterial_1lo27")
+occluder = SubResource("OccluderPolygon2D_bk4dp")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Dash_Cooldown" to="." method="_on_dash_cooldown_timeout"]
