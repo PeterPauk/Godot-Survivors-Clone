@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhj2f2wwi330i"]
 
-[ext_resource type="Texture2D" uid="uid://17tptho3thit" path="res://Textures/Items/Weapons/goth gun.png" id="1_md0m7"]
+[ext_resource type="Texture2D" uid="uid://bubtivlptt26c" path="res://Textures/Items/Weapons/goth_vector.png" id="2_delnv"]
 [ext_resource type="Script" path="res://Utility/weapon.gd" id="2_i1k15"]
 
 [node name="Weapon" type="CharacterBody2D"]
@@ -9,4 +9,4 @@ script = ExtResource("2_i1k15")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1.19209e-07)
 scale = Vector2(0.882812, 0.828125)
-texture = ExtResource("1_md0m7")
+texture = ExtResource("2_delnv")

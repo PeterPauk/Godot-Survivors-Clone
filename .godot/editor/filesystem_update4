@@ -1,10 +1,9 @@
-res://Utility/shadow_orb.gd
+res://Player/player.gd
+res://Abilities/shadow_orb_logic.gd
 res://World/world.tscn
 res://Utility/enemy_spawner.gd
 res://Player/player.tscn
 res://Utility/weapon.tscn
 res://Enemy/enemy.tscn
 res://Abilities/shadow_orb.tscn
-res://Player/player.gd
-res://Abilities/shadow_orb.gd
 res://Cards/shadow_orb_card.tscn
