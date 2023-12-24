@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698586587
+::res://::1703419603
 icon.svg::CompressedTexture2D::1730451811002220422::1667006571::1695571254::1::::<><>::
-::res://Abilities/::1698592466
+::res://Abilities/::1703418713
 shadow_orb.gd::GDScript::-1::1698246796::0::1::::<>Area2D<>::
-shadow_orb.tscn::PackedScene::8475544719271837282::1698592466::0::1::::<><>::res://Abilities/shadow_orb.gd<>uid://kjpx8qe1xu0g::::res://Textures/Items/Weapons/ice_spear.png<>uid://c5l8mkeobkidq::::res://Textures/point light.jpg
+shadow_orb.tscn::PackedScene::8475544719271837282::1703418713::0::1::::<><>::res://Abilities/shadow_orb.gd<>uid://c3lgr7588kbjk::::res://Textures/Items/Weapons/shadow_orb.png<>uid://c5l8mkeobkidq::::res://Textures/point light.jpg
 shadow_orb_logic.gd::GDScript::-1::1698588609::0::1::::<>Node2D<>::
 ::res://Audio/::1695571143
 ::res://Audio/GUI/::1695571254
@@ -21,17 +21,17 @@ Lose.ogg::AudioStreamOggVorbis::7804710485531096328::1667006571::1695571254::1::
 tornado.ogg::AudioStreamOggVorbis::805201254836861058::1667006571::1695571254::1::::<><>::
 Victory.wav::AudioStreamWAV::1312098613670538254::1667006571::1695571254::1::::<><>::
 woosh.wav::AudioStreamWAV::7021668949769984795::1667006571::1695571254::1::::<><>::
-::res://Cards/::1698592450
-shadow_orb_card.tscn::PackedScene::2824168413121880061::1698592450::0::1::::<><>::res://Abilities/shadow_orb_logic.gd
-::res://Enemy/::1698592449
+::res://Cards/::1703418713
+shadow_orb_card.tscn::PackedScene::2824168413121880061::1703418713::0::1::::<><>::res://Abilities/shadow_orb_logic.gd
+::res://Enemy/::1703418713
 enemy.gd::GDScript::-1::1698246684::0::1::::<>CharacterBody2D<>::
-enemy.tscn::PackedScene::8984009357614660607::1698592449::0::1::::<><>::res://Enemy/enemy.gd<>uid://c28nv17mtkxi7::::res://Textures/Enemy/imp_weak.png<>uid://b1abs8eqyt7ae::::res://Utility/hurt_box.tscn<>uid://c6u624sr6hs0g::::res://Utility/hit_box.tscn
+enemy.tscn::PackedScene::8984009357614660607::1703418713::0::1::::<><>::res://Enemy/enemy.gd<>uid://c28nv17mtkxi7::::res://Textures/Enemy/imp_weak.png<>uid://b1abs8eqyt7ae::::res://Utility/hurt_box.tscn<>uid://c6u624sr6hs0g::::res://Utility/hit_box.tscn
 ::res://Font/::1695571254
 tenderness.otf::FontFile::1509205235564341146::1667006571::1695571254::1::::<><>::
-::res://Player/::1698592449
+::res://Player/::1703418712
 dynamic_cam.gd::GDScript::-1::1698090153::0::1::::<>Camera2D<>::
 player.gd::GDScript::-1::1698506007::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3339324110768348581::1698592449::0::1::::<><>::res://Player/player.gd<>uid://bppn4wuq11bg7::::res://Textures/Player/Goth Girl-Sheet fin-Sheet.png<>res://Player/dynamic_cam.gd<>uid://b1abs8eqyt7ae::::res://Utility/hurt_box.tscn<>uid://dhj2f2wwi330i::::res://Utility/weapon.tscn
+player.tscn::PackedScene::3339324110768348581::1703418712::0::1::::<><>::res://Player/player.gd<>uid://bppn4wuq11bg7::::res://Textures/Player/Goth Girl-Sheet fin-Sheet.png<>res://Player/dynamic_cam.gd<>uid://b1abs8eqyt7ae::::res://Utility/hurt_box.tscn<>uid://dhj2f2wwi330i::::res://Utility/weapon.tscn
 ::res://Textures/::1698590568
 dirt_full_new.png::CompressedTexture2D::3559545247527464576::1667006571::1695571254::1::::<><>::
 flashlight.jpg::CompressedTexture2D::7829106075227904813::1698590565::1698590568::1::::<><>::
@@ -65,7 +65,7 @@ low_boots.png::CompressedTexture2D::2988305392490906954::1667006571::1695571254:
 scroll_old.png::CompressedTexture2D::4051793682383937482::1667006571::1695571254::1::::<><>::
 thick_new.png::CompressedTexture2D::1645014572154145695::1667006571::1695571254::1::::<><>::
 urand_mage.png::CompressedTexture2D::9162773921040603838::1667006571::1695571254::1::::<><>::
-::res://Textures/Items/Weapons/::1698592728
+::res://Textures/Items/Weapons/::1698592748
 bullet.png::CompressedTexture2D::1517010063009559411::1698243047::1698243079::1::::<><>::
 goth gun.png::CompressedTexture2D::1892151441921443223::1697897304::1697897596::1::::<><>::
 goth_vector.png::CompressedTexture2D::3793430964112512884::1698578797::1698578798::1::::<><>::
@@ -80,17 +80,17 @@ Goth Girl.png::CompressedTexture2D::8484255628676815590::1696618370::1696618385:
 ::res://Textures/Player/::1697895043
 Goth Girl-Sheet fin-Sheet.png::CompressedTexture2D::3471061300676215776::1697894994::1697895043::1::::<><>::
 player_sprite.png::CompressedTexture2D::7348731633937229991::1667006571::1695571254::1::::<><>::
-::res://Utility/::1698592449
+::res://Utility/::1703419280
 bullet.gd::GDScript::-1::1698243714::0::1::::Bullet<>Area2D<>::
 bullet.tscn::PackedScene::5762385684145958070::1698243663::0::1::::<><>::uid://vu36024hsh44
-enemy_spawner.gd::GDScript::-1::1698586595::0::1::::<>Node2D<>::
+enemy_spawner.gd::GDScript::-1::1703418055::0::1::::<>Node2D<>::
 enemy_spawner.tscn::PackedScene::6238700210242092426::1698149519::0::1::::<><>::res://Utility/enemy_spawner.gd<>res://Utility/spawn_info.gd<>uid://d086k6x2dqno6
 hit_box.gd::GDScript::-1::1696670247::0::1::::<>Area2D<>::
 hit_box.tscn::PackedScene::6991915070255353192::1698149519::0::1::::<><>::res://Utility/hit_box.gd
 hurt_box.gd::GDScript::-1::1698246687::0::1::::<>Area2D<>::
 hurt_box.tscn::PackedScene::4211425219774592668::1698149519::0::1::::<><>::res://Utility/hurt_box.gd
 spawn_info.gd::GDScript::-1::1697361592::0::1::::Spawn_info<>Resource<>::
-weapon.gd::GDScript::-1::1698592317::0::1::::<>CharacterBody2D<>::
-weapon.tscn::PackedScene::7670813097233841642::1698592449::0::1::::<><>::uid://bubtivlptt26c::::res://Textures/Items/Weapons/goth_vector.png<>res://Utility/weapon.gd<>uid://djsqh6uf8kvgn::::res://Textures/flashlight.jpg
-::res://World/::1698592449
-world.tscn::PackedScene::8166960150643375006::1698592449::0::1::::<><>::uid://si2qc2slw2ff::::res://Textures/floor_tile.png<>uid://bntugelqqirvx::::res://Player/player.tscn<>uid://cu5cqmalectxa::::res://Utility/enemy_spawner.tscn<>uid://c5l8mkeobkidq::::res://Textures/point light.jpg
+weapon.gd::GDScript::-1::1703418707::0::1::::<>CharacterBody2D<>::
+weapon.tscn::PackedScene::7670813097233841642::1703419280::0::1::::<><>::uid://bubtivlptt26c::::res://Textures/Items/Weapons/goth_vector.png<>res://Utility/weapon.gd<>uid://djsqh6uf8kvgn::::res://Textures/flashlight.jpg
+::res://World/::1703418712
+world.tscn::PackedScene::8166960150643375006::1703418712::0::1::::<><>::uid://si2qc2slw2ff::::res://Textures/floor_tile.png<>uid://bntugelqqirvx::::res://Player/player.tscn<>uid://cu5cqmalectxa::::res://Utility/enemy_spawner.tscn<>uid://c5l8mkeobkidq::::res://Textures/point light.jpg

@@ -15,7 +15,7 @@ texture = ExtResource("2_delnv")
 [node name="Light" type="Node2D" parent="."]
 
 [node name="PointLight2D" type="PointLight2D" parent="Light"]
-position = Vector2(228, 30)
+position = Vector2(225, 24)
 rotation = 0.890118
 scale = Vector2(0.991102, 1.00527)
 color = Color(1, 1, 1, 0.235294)
@@ -25,3 +25,6 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_filter = 1
 texture = ExtResource("3_s043r")
 texture_scale = 2.0
+
+[node name="GunEnd" type="Marker2D" parent="."]
+position = Vector2(16, 1)

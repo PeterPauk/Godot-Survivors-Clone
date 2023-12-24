@@ -19,7 +19,7 @@ func _ready():
 		1:
 			hp = 1
 			speed = 150
-			damage = 5
+			damage = 999
 			knockback = 100
 			attack_size = 1.0
 

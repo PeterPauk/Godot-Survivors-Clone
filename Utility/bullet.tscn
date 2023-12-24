@@ -1,22 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://codlwd1j1d7vu"]
 
-[ext_resource type="Texture2D" uid="uid://vu36024hsh44" path="res://Textures/Items/Weapons/bullet.png" id="1_5f7xn"]
-[ext_resource type="Script" path="res://Utility/bullet.gd" id="1_rwboc"]
+[ext_resource type="Script" path="res://Utility/bullet.gd" id="1_g5xao"]
+[ext_resource type="Texture2D" uid="uid://c3lgr7588kbjk" path="res://Textures/Items/Weapons/shadow_orb.png" id="1_wpi0g"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_27dhq"]
-size = Vector2(16, 2)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ethf"]
+size = Vector2(20, 17)
 
-[node name="Bullet" type="Area2D"]
-collision_mask = 4
-script = ExtResource("1_rwboc")
+[node name="Bullet" type="Area2D" groups=["attack"]]
+script = ExtResource("1_g5xao")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5f7xn")
+[node name="Timer" type="Timer" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_27dhq")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2ethf")
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(0.8, 0.1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wpi0g")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
